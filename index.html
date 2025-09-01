@@ -3,38 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>503 Service Unavailable</title>
+  <meta name="description" content="Service Temporarily Unavailable">
+  <title>503 Service Unavailable | Temporary Maintenance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    :root {
+      --primary-color: #d32f2f;
+      --secondary-color: #f5f5f5;
+      --text-color: #333;
+      --light-gray: #e0e0e0;
+      --dark-gray: #757575;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
       margin: 0;
       padding: 0;
-      background: #fff;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      color: #c00;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .error-container {
+      max-width: 650px;
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .error-header {
+      background: var(--primary-color);
+      color: white;
+      padding: 25px;
       text-align: center;
     }
-    .error-box {
-      max-width: 500px;
-    }
-    h1 {
-      font-size: 60px;
+    
+    .error-header h1 {
+      font-size: 5rem;
+      font-weight: 700;
       margin-bottom: 10px;
     }
-    p {
-      font-size: 20px;
-      margin: 0;
+    
+    .error-header h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    
+    .error-content {
+      padding: 30px;
+    }
+    
+    .error-icon {
+      text-align: center;
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .error-message {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .error-message p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    
+    .progress-container {
+      width: 100%;
+      background-color: var(--light-gray);
+      border-radius: 5px;
+      margin: 25px 0;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 8px;
+      width: 0%;
+      background-color: var(--primary-color);
+      border-radius: 5px;
+      animation: progressAnimation 15s infinite;
+    }
+    
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #b71c1c;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background-color: var(--light-gray);
+      color: var(--text-color);
+    }
+    
+    .btn-secondary:hover {
+      background-color: #d4d4d4;
+      transform: translateY(-2px);
+    }
+    
+    .error-footer {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid var(--light-gray);
+      color: var(--dark-gray);
+      font-size: 0.9rem;
+    }
+    
+    .contact-info {
+      margin-top: 10px;
+    }
+    
+    @keyframes progressAnimation {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+    
+    @media (max-width: 600px) {
+      .error-header h1 {
+        font-size: 4rem;
+      }
+      
+      .error-header h2 {
+        font-size: 1.5rem;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="error-box">
-    <h1>503</h1>
-    <p>Service Unavailable</p>
-    <p>The server is temporarily unable to handle your request. Please contact server admin. </p>
-  </div>
+  <div class="error-container">
+    <div class="error-header">
+      <h1>503</h1>
+      <h2>Service Unavailable</h2>
+    </div>
+    
+    <div class="error-content">
+      <div class="error-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      
+      <div class="error-message">
+        <p>The server is temporarily unable to handle your request due to maintenance or temporary overloading.</p>
+        <p>Please try again in a few moments.</p>
+      </div>
+      
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      
+     
+    </div>
+    
+   
+
+  <script>
+    // Simple retry functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Auto-retry after 30 seconds
+      setTimeout(function() {
+        window.location.reload();
+      }, 30000);
+    });
+  </script>
 </body>
 </html>
