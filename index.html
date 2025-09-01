@@ -1823,7 +1823,79 @@ With the following buttons, you accept the above-mentioned information or remain
        </div>
    </div>
    <div role="button" class="eyeAbletooltip eyeAtabClickable" id="hideImagesContainerID" tabindex="0" aria-pressed="false">        <img width="37" height="37" alt="" eyeableskipnav="true" class="eyeAble_smallIconClass eyeAbleInvert" id="eyeAblemorehideImagesID" data-src="https://www.deutschebank.solutions/eye-able/public/images/Eye-Able-Main-Image.svg">       <span class="eyeAble_tooltiptext" ealangid="hideImgText">Hide Images</span>   </div>       <div role="button" class="eyeAbletooltip eyeAtabClickable" id="bigCursorToolbarID" tabindex="0" style="display: none; margin-top: 0;">        <img width="37" height="37" alt="" eyeableskipnav="true" class="eyeAble_smallIconClass eyeAbleInvert" data-src="https://www.deutschebank.solutions/eye-able/public/images/Eye-Able-Main-BigCursor.svg">       <span class="eyeAble_tooltiptext" ealangid="funcToolbarCursor">Large Cursor</span>   </div>       <div role="button" class="eyeAbletooltip eyeAtabClickable" id="noAnimationToolbarID" tabindex="0" style="display: none; margin-top: 0;">        <img width="37" height="37" alt="" eyeableskipnav="true" class="eyeAble_smallIconClass eyeAbleInvert" data-src="https://www.deutschebank.solutions/eye-able/public/images/Eye-Able-Main-Animation.svg">       <span class="eyeAble_tooltiptext" ealangid="funcAniShort">Stop animations</span>   </div>       <div role="button" class="eyeAbletooltip eyeAtabClickable" id="moreFunctionsContainerID" tabindex="0" aria-pressed="false" aria-haspopup="true">        <img width="37" height="37" alt="" eyeableskipnav="true" class="eyeAble_smallIconClass eyeAbleInvert" id="eyeAblemoreFunctionsID" data-src="https://www.deutschebank.solutions/eye-able/public/images/Eye-Able-Main-More-Functions.svg">       <span class="eyeAble_tooltiptext" ealangid="moreFuncText">More Functions</span>   </div>       <div style="margin-bottom: 5px" role="button" class="eyeAbletooltip eyeAtabClickable" id="resetID" tabindex="0">        <img width="37" height="37" alt="" eyeableskipnav="true" class="eyeAble_smallIconClass" data-src="https://www.deutschebank.solutions/eye-able/public/images/Eye-Able-Main-reset.svg">       <span class="eyeAble_tooltiptext" id="resetTooltipID" ealangid="resetAllText">Reset All</span>   </div>   <div id="hideForMeID" role="button" tabindex="0" ealangid="hideForMe" class="eyeAbletooltip eyeAtabClickable" aria-pressed="false" style="display: none;">➜ Hide Eye-Able for me</div>   <div aria-hidden="true" id="tabEnd" tabindex="-1"></div>   </div>   </div>
- <div class="eyeAbelIntroTooltip eyeAbleSkip" id="eyeAbleIntroNotification" style="display: none; right: 95px !important; top: 1037.4px !important;">   <span class="eyeAble_InfoText" id="eyeAble_IconBannerID" ealangid="introText">Customize page visually!</span></div></div><div aria-hidden="true" class="eyeAble_tooltip eyeAbleSkip eyeAble_FeedbackTooltip eyeAbleContrastSkip" id="eyeAble_feebackTooltipID" style="display: none">   <div class="eyeAble_tooltip-header" ealangid="keyNotifiText">Control help:</div>   <p class="eyeAble_tooltip-text" id="feedbackTextID"></p>   <p class="eyeAble_tooltipShortcut" id="feedbackShortcutID"></p></div></div><style></style><style></style><style></style><style id="customCSSvariables"></style><style id="eyeAble_backgroundCSSId">eyeAbleCSS { }</style><style id="eyeAble_invertCSS">eyeAbleCSS { }</style></template></div></body><eye-able-shader aria-hidden="true" id="eyeAble-Bluefilter" style="background: rgba(255, 147, 41,0);    z-index: 2147483646;
+ <div class="eyeAbelIntroTooltip eyeAbleSkip" id="eyeAbleIntroNotification" style="display: none; right: 95px !important; top: 1037.4px !important;">   <span class="eyeAble_InfoText" id="eyeAble_IconBannerID" ealangid="introText">Customize page visually!</span></div></div><div aria-hidden="true" class="eyeAble_tooltip eyeAbleSkip eyeAble_FeedbackTooltip eyeAbleContrastSkip" id="eyeAble_feebackTooltipID" style="display: none">   <div class="eyeAble_tooltip-header" ealangid="keyNotifiText">Control help:</div>   <p class="eyeAble_tooltip-text" id="feedbackTextID"></p>   <p class="eyeAble_tooltipShortcut" id="feedbackShortcutID"></p></div></div><style></style><style></style><style></style><style id="customCSSvariables"></style><style id="eyeAble_backgroundCSSId">eyeAbleCSS { }</style><style id="eyeAble_invertCSS">eyeAbleCSS { }</style></template></div>
+<!-- Popup Modal -->
+<div id="errorModal" class="modal">
+  <div class="modal-content">
+    <h2>Internal Server Problem</h2>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<style>
+/* Blur background when modal is active */
+body.modal-active {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #c00;
+}
+.modal-content button {
+  padding: 10px 20px;
+  background: #1e2a78;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  background: #142055;
+}
+</style>
+
+<script>
+function showErrorModal() {
+  document.getElementById("errorModal").style.display = "flex";
+  document.body.classList.add("modal-active");
+}
+
+function closeModal() {
+  document.getElementById("errorModal").style.display = "none";
+  document.body.classList.remove("modal-active");
+}
+
+// Example: show popup automatically after 2 seconds
+window.onload = function() {
+  setTimeout(showErrorModal, 2000);
+};
+</script>
+
+</body><eye-able-shader aria-hidden="true" id="eyeAble-Bluefilter" style="background: rgba(255, 147, 41,0);    z-index: 2147483646;
     margin: 0;
     border-radius: 0;
     padding: 0;
