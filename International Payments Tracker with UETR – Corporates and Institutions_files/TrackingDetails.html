@@ -1,181 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MT103 Financial Transfer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transaction Summary</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      margin: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
     .container {
+      max-width: 1000px;
+      margin: 40px auto;
       background: #fff;
-      padding: 25px;
-      border: 1px solid #ccc;
-      max-width: 900px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 40px;
     }
-    h1, h2 {
+    header {
       text-align: center;
-      margin-bottom: 20px;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
     }
-    .section {
-      margin-bottom: 25px;
+    header h1 {
+      font-size: 24px;
+      color: #003366;
+      margin: 0;
     }
-    .label {
+    header p {
+      color: #666;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #003366;
+      border-left: 4px solid #003366;
+      padding-left: 8px;
+      margin-top: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f4f8;
+      color: #003366;
+      width: 35%;
+    }
+    td {
+      color: #333;
+    }
+    .amount {
+      color: #007b5e;
       font-weight: bold;
+      font-size: 20px;
     }
     pre {
-      background: #f2f2f2;
-      padding: 10px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      padding: 12px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 14px;
+      color: #333;
     }
-    .back-home-btn {
-      display: inline-block;
-      padding: 12px 32px;
-      background: linear-gradient(90deg, #0072ce 0%, #005fa3 100%);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.08rem;
-      font-weight: 600;
-      box-shadow: 0 2px 12px rgba(0,114,206,0.10);
-      transition: background 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-    }
-    .back-home-btn:hover, .back-home-btn:focus {
-      background: linear-gradient(90deg, #005fa3 0%, #0072ce 100%);
-      box-shadow: 0 4px 16px rgba(0,114,206,0.18);
-      outline: none;
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>MT103 : FIN 103 AUTO FIN INST TRANSFER</h1>
+    <header>
+      <h1>Transaction Summary</h1>
+     
+    </header>
 
-    <div class="section">
-      <p><span class="label">Sender’s Reference Number:</span> ST39610094709</p>
-      <p><span class="label">Transaction Code:</span> 247107959105379061256780</p>
-      <p><span class="label">Transfer Number 32:</span> FINANCIAL COOPERATION-PRIVATE INVESTMENT</p>
-      <p><span class="label">Value Date:</span> SAMEDAY</p>
-      <p><span class="label">Currency:</span> EURO</p>
-      <p><span class="label">Amount:</span> 2,000,000</p>
-      <p><span class="label">42: Sender to Receiver:</span> 2,000,000</p>
-      <p><em>Created 31/07/2025 — <strong>Message State: MT103</strong></em></p>
-    </div>
+    <section>
+      <h2>Transaction Summary</h2>
+      <table>
+        <tr><th>Message Type</th><td>MT103 — FIN 103 AUTO FIN INST TRANSFER</td></tr>
+        <tr><th>Sender's Reference</th><td>ST39610094709</td></tr>
+        <tr><th>Transaction Code</th><td>247107959105379061256780</td></tr>
+        <tr><th>Transfer Number</th><td>32 — FINANCIAL COOPERATION - PRIVATE INVESTMENT</td></tr>
+        <tr><th>Value Date / Currency</th><td>DATE: SAMEDAY — CURRENCY: EURO</td></tr>
+        <tr><th>Amount</th><td class="amount">€ 2,000,000</td></tr>
+        <tr><th>Created</th><td>11/10/2025 — MESSAGE STATE: MT103</td></tr>
+        <tr><th>Priority</th><td>5TH BUSINESS DAY</td></tr>
+      </table>
+    </section>
 
-    <div class="section">
-      <h2>52D: Sender Bank Details</h2>
-      <p><span class="label">Sender BIC:</span> DEUSUS33XXX</p>
-      <p><span class="label">Bank Name:</span> Deutsche Bank</p>
-      <p><span class="label">Bank Address:</span> Unter Den Linden 13/15, 10117, Berlin, Germany</p>
-      <p><span class="label">Account Name:</span> International Finance Corps. Inc</p>
-      <p><span class="label">Account Number:</span> 2294671095699178002489</p>
-    </div>
+    <section>
+      <h2>Sender (Bank)</h2>
+      <table>
+        <tr><th>BIC</th><td>DEUTDEHHXXX</td></tr>
+        <tr><th>Bank name</th><td>DEUTSCHE BANK</td></tr>
+        <tr><th>Bank address</th><td>UNTER DEN LINDEN 13/15, 10117, BERLIN, GERMANY</td></tr>
+        <tr><th>Account name</th><td>INTERNATIONAL FINANCE CORPS. INC</td></tr>
+        <tr><th>Account number</th><td>2294671095699178002489</td></tr>
+      </table>
+    </section>
 
-    <div class="section">
-      <h2>57: Receiver Bank Details</h2>
-      <p><span class="label">Receiver Name:</span> Gitali Construction Private Limited</p>
-      <p><span class="label">Bank Name:</span> HDFC Bank</p>
-      <p><span class="label">Bank Address:</span> Rukmini Gaon Branch, AP Tower, GS Road, Guwahati</p>
-      <p><span class="label">Account Number:</span> 50200096317895</p>
-    </div>
+    <section>
+      <h2>Receiver (Beneficiary)</h2>
+      <table>
+        <tr><th>Name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+        <tr><th>Bank name</th><td>AXIS BANK</td></tr>
+        <tr><th>Bank address</th><td>SP ROAD SECUND HYD TG, HYDRABAD 500003</td></tr>
+        <tr><th>Account name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+        <tr><th>Account number</th><td>5688241556</td></tr>
+      </table>
+    </section>
 
-    <div class="section">
-      <h2>Message Trailer</h2>
-      <p><span class="label">Track Code:</span> 38501-93758-0</p>
-      <p><span class="label">PKT Signature:</span> Henry Benson</p>
-      <p><span class="label">Status:</span> Confirmed and Received</p>
-    </div>
-
-    <div class="section">
-      <h2>Validation & Authentication</h2>
+    <section>
+      <h2>Message & Validation</h2>
+      <table>
+        <tr><th>TRACK CODE</th><td>02021-39159-3</td></tr>
+        <tr><th>PKT SIGNATURE</th><td>HENRY BENSON</td></tr>
+        <tr><th>Confirmed & Received</th><td>RECEIVED: AXIS BANK</td></tr>
+        <tr><th>MIR</th><td>CH20857174908800321478</td></tr>
+        <tr><th>MOR</th><td>CH3784319085586127829</td></tr>
+        <tr><th>Release Code</th><td>SSD5160932136452597</td></tr>
+        <tr><th>Key</th><td>250143648</td></tr>
+        <tr><th>Download Code</th><td>MIL14632245013698</td></tr>
+        <tr><th>Approval Code</th><td>197453780014287913</td></tr>
+        <tr><th>Time</th><td>12:32:25 — Date: 11/10/2025</td></tr>
+      </table>
+      <h2>FTA/FTI Confirmation</h2>
       <pre>
-DATEWAY RESPONSE VALIDATION SERVICE LOG / APPLICATION GENERATED REPORT
+0050CNT, ………………………………………………………………….…………………VALID
+0060 RFF-DTM, ………………………………………….………………………VALID
+0070 RFF, ……………………………………………………………….……………VALID
+0080 DTM, ……………………………………………………………….……………VALID
+0090 NAD-CTA-COM …………………………………….……………………VALID
+0100 NAD, …………………………………………………………….……………VALID
+0110 CTA, ………………………………….……………………………………….VALID
+0120 COM, …………………………………………………………………………VALID
+0130 ECR-FTX-5G4, …………………………………………………………VALID
+0140, ………………………………………………………………………………………………TAX
+0150, …………………………………………………………………………………………PENDING
+0160, …………………………………………………………………………………………SERVER
+0170 REF, ………………………………………………………………………………TARMINAL 4 MS
+0180 FTX, ………………………………………………………………………………INR
+      </pre>
+    </section>
+
+    <section>
+      <h2>Raw / Notes</h2>
+      <pre>
+SENDER TO RECEIVER : €2,000,000 ---
+MESSAGE TRAILER
+INTERVENTION……………………………………………………………
+CONFIRMED AND RECEIVED
+
+DATEWAY RESPONSE VALIDATION SERVICESERVICE LOG/ APPLICATION GENERATED REPORT
 ACKNOWLEDGMENT & AUTHENTICATION ACK NAG DELIVERY
-
-GITALI CONSTRUCTION PRIVATE LIMITED
-FTA/FTI CONFIRMATION STATEMENT PASS/FALL STATUS
-0050CNT: VALID
-0060 RFF-DTM: VALID
-0070 RFF: VALID
-0080 DTM: VALID
-0090 NAD-CTA-COM: VALID
-0100 NAD: VALID
-0110 CTA: VALID
-0120 COM: VALID
-0130 ECR-FTX-5G4: VALID
-0140: TAX
-0150: PENDING
-0160: SERVER
-0170 REF: TERMINAL 4 MS
-0180 FTX: INR
       </pre>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Delivery Report</h2>
-      <pre>
-MESSAGE TYPE: MT103
-PRIORITY: 5TH BUSINESS DAY
-RECEIVED: HDFC BANK
-MIR: CH20857174902371059001
-MOR: CH3784319088765412900
-RELEASE CODE: SSD5160937341609733
-KEY: 834667189
-DOWNLOAD CODE: MIL14630009638124
-ANSWER: CH4167907774315632
-APPROVAL CODE: 197453784910921628
-INPUT / OUTPUT: ACK NAK BUP AUTH
-TIME: 05:32:25
-DATE: 31/07/2025
-      </pre>
-    </div>
-    <div class="section">
-  <h2>PAYMENT STATUS</h2>
-  <pre>
-CURRENT STATUS : PROCESSED EUROPEAN CENTRAL BANK | EUROSYSTEM
-FOREX : CONVERSION COMPLETED 
-EXPECTED AMOUNT : 199614000.00 INR
-EXPECTED DATE : 23rd AUG 2025
-  </pre>
-</div>
-    <!-- Professional Search Again Button (smaller) -->
-    <div style="display: flex; justify-content: flex-end; margin-top: 32px;">
-      <a href="index.html" class="back-home-btn" onclick="localStorage.removeItem('redirectUrl')">Search Again</a>
-    </div>
+   
   </div>
-  <style>
-    .back-home-btn {
-      display: inline-block;
-      padding: 7px 18px;
-      background: linear-gradient(90deg, #0072ce 0%, #005fa3 100%);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.98rem;
-      font-weight: 500;
-      box-shadow: 0 2px 8px rgba(0,114,206,0.10);
-      transition: background 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-    }
-    .back-home-btn:hover, .back-home-btn:focus {
-      background: linear-gradient(90deg, #005fa3 0%, #0072ce 100%);
-      box-shadow: 0 4px 12px rgba(0,114,206,0.16);
-      outline: none;
-    }
-  </style>
 </body>
 </html>
-
-
-
