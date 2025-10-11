@@ -13,12 +13,13 @@
       padding: 0;
     }
     .container {
+      width: 95%;
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 20px auto;
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 40px;
+      padding: 20px;
     }
     header {
       text-align: center;
@@ -52,11 +53,12 @@
       padding: 10px 12px;
       border-bottom: 1px solid #ddd;
       text-align: left;
+      word-break: break-word;
     }
     th {
       background-color: #f0f4f8;
       color: #003366;
-      width: 35%;
+      width: 40%;
     }
     td {
       color: #333;
@@ -81,13 +83,57 @@
       color: #666;
       margin-top: 40px;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      header h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      th, td {
+        display: block;
+        width: 100%;
+      }
+      th {
+        background: #003366;
+        color: #fff;
+        border-bottom: none;
+        padding-top: 8px;
+      }
+      td {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+      }
+      table {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      h2 {
+        font-size: 15px;
+      }
+      .amount {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Transaction Summary</h1>
-     
     </header>
 
     <section>
@@ -140,6 +186,7 @@
         <tr><th>Approval Code</th><td>197453780014287913</td></tr>
         <tr><th>Time</th><td>12:32:25 — Date: 11/10/2025</td></tr>
       </table>
+
       <h2>FTA/FTI Confirmation</h2>
       <pre>
 0050CNT, ………………………………………………………………….…………………VALID
@@ -172,7 +219,7 @@ ACKNOWLEDGMENT & AUTHENTICATION ACK NAG DELIVERY
       </pre>
     </section>
 
-   
+    
   </div>
 </body>
 </html>
