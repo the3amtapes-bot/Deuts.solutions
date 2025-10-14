@@ -19,7 +19,6 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 20px;
-      overflow-x: auto;
     }
     header {
       text-align: center;
@@ -39,10 +38,14 @@
       padding-left: 8px;
       margin-top: 25px;
     }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 10px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
       min-width: 600px;
     }
     th, td {
@@ -93,26 +96,6 @@
       h2 {
         font-size: 16px;
       }
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      table {
-        border: none;
-      }
-      th {
-        background: #003366;
-        color: #fff;
-        padding: 8px;
-      }
-      td {
-        padding: 8px 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      tr {
-        margin-bottom: 12px;
-        border: 1px solid #eee;
-        border-radius: 5px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -136,67 +119,77 @@
 
     <section>
       <h2>Transaction Details</h2>
-      <table>
-        <tr><th>Message Type</th><td>MT103 — FIN 103 AUTO FIN INST TRANSFER</td></tr>
-        <tr><th>Sender's Reference</th><td>ST39610094709</td></tr>
-        <tr><th>Transaction Code</th><td>247107959105379061256780</td></tr>
-        <tr><th>Transfer Number</th><td>32 — FINANCIAL COOPERATION - PRIVATE INVESTMENT</td></tr>
-        <tr><th>Value Date / Currency</th><td>DATE: SAMEDAY — CURRENCY: EURO</td></tr>
-        <tr><th>Amount</th><td class="amount">€ 2,000,000</td></tr>
-        <tr><th>Created</th><td>11/10/2025 — MESSAGE STATE: MT103</td></tr>
-        <tr><th>Priority</th><td>5TH BUSINESS DAY</td></tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Message Type</th><td>MT103 — FIN 103 AUTO FIN INST TRANSFER</td></tr>
+          <tr><th>Sender's Reference</th><td>ST39610094709</td></tr>
+          <tr><th>Transaction Code</th><td>247107959105379061256780</td></tr>
+          <tr><th>Transfer Number</th><td>32 — FINANCIAL COOPERATION - PRIVATE INVESTMENT</td></tr>
+          <tr><th>Value Date / Currency</th><td>DATE: SAMEDAY — CURRENCY: EURO</td></tr>
+          <tr><th>Amount</th><td class="amount">€ 2,000,000</td></tr>
+          <tr><th>Created</th><td>11/10/2025 — MESSAGE STATE: MT103</td></tr>
+          <tr><th>Priority</th><td>5TH BUSINESS DAY</td></tr>
+        </table>
+      </div>
     </section>
 
     <section>
       <h2>Sender (Bank)</h2>
-      <table>
-        <tr><th>BIC</th><td>DEUTDEHHXXX</td></tr>
-        <tr><th>Bank name</th><td>DEUTSCHE BANK</td></tr>
-        <tr><th>Bank address</th><td>UNTER DEN LINDEN 13/15, 10117, BERLIN, GERMANY</td></tr>
-        <tr><th>Account name</th><td>INTERNATIONAL FINANCE CORPS. INC</td></tr>
-        <tr><th>Account number</th><td>2294671095699178002489</td></tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>BIC</th><td>DEUTDEHHXXX</td></tr>
+          <tr><th>Bank name</th><td>DEUTSCHE BANK</td></tr>
+          <tr><th>Bank address</th><td>UNTER DEN LINDEN 13/15, 10117, BERLIN, GERMANY</td></tr>
+          <tr><th>Account name</th><td>INTERNATIONAL FINANCE CORPS. INC</td></tr>
+          <tr><th>Account number</th><td>2294671095699178002489</td></tr>
+        </table>
+      </div>
     </section>
 
     <section>
       <h2>Receiver (Beneficiary)</h2>
-      <table>
-        <tr><th>Name</th><td>MD IMRAN ALAM ANSARI</td></tr>
-        <tr><th>Bank name</th><td>AXIS BANK</td></tr>
-        <tr><th>Bank address</th><td>SP ROAD SECUND HYD TG, HYDRABAD 500003</td></tr>
-        <tr><th>Account name</th><td>MD IMRAN ALAM ANSARI</td></tr>
-        <tr><th>Account number</th><td>5688241556</td></tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+          <tr><th>Bank name</th><td>AXIS BANK</td></tr>
+          <tr><th>Bank address</th><td>SP ROAD SECUND HYD TG, HYDRABAD 500003</td></tr>
+          <tr><th>Account name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+          <tr><th>Account number</th><td>5688241556</td></tr>
+        </table>
+      </div>
     </section>
 
     <section>
       <h2>Message & Validation</h2>
-      <table>
-        <tr><th>TRACK CODE</th><td>02021-39159-3</td></tr>
-        <tr><th>PKT SIGNATURE</th><td>HENRY BENSON</td></tr>
-        <tr><th>Confirmed & Received</th><td>RECEIVED: AXIS BANK</td></tr>
-        <tr><th>MIR</th><td>CH20857174908800321478</td></tr>
-        <tr><th>MOR</th><td>CH3784319085586127829</td></tr>
-        <tr><th>Release Code</th><td>SSD5160932136452597</td></tr>
-        <tr><th>Key</th><td>250143648</td></tr>
-        <tr><th>Download Code</th><td>MIL14632245013698</td></tr>
-        <tr><th>Approval Code</th><td>197453780014287913</td></tr>
-        <tr><th>Time</th><td>12:32:25 — Date: 11/10/2025</td></tr>
-      </table>
-
-<section>
-      <h2>Payment Status</h2>
-      <table>
-        <tr><th>Current Status</th><td>Processed EUROPEAN CENTRAL BANK | EUROSYSTEM</td></tr>
-        <tr><th>Forex </th><td>Conversion Completed </td></tr>
-        <tr><th>Expected Amount </th><td>205,206,000.00 INR
-</td></tr>
-        <tr><th>Expected Date</th><td>15 Oct  2025</td></tr>
-        
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>TRACK CODE</th><td>02021-39159-3</td></tr>
+          <tr><th>PKT SIGNATURE</th><td>HENRY BENSON</td></tr>
+          <tr><th>Confirmed & Received</th><td>RECEIVED: AXIS BANK</td></tr>
+          <tr><th>MIR</th><td>CH20857174908800321478</td></tr>
+          <tr><th>MOR</th><td>CH3784319085586127829</td></tr>
+          <tr><th>Release Code</th><td>SSD5160932136452597</td></tr>
+          <tr><th>Key</th><td>250143648</td></tr>
+          <tr><th>Download Code</th><td>MIL14632245013698</td></tr>
+          <tr><th>Approval Code</th><td>197453780014287913</td></tr>
+          <tr><th>Time</th><td>12:32:25 — Date: 11/10/2025</td></tr>
+        </table>
+      </div>
     </section>
-      
+
+    <section>
+      <h2>Payment Status</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Current Status</th><td>Processed EUROPEAN CENTRAL BANK | EUROSYSTEM</td></tr>
+          <tr><th>Forex</th><td>Conversion Completed</td></tr>
+          <tr><th>Expected Amount</th><td>205,206,000.00 INR</td></tr>
+          <tr><th>Expected Date</th><td>15 Oct 2025</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
       <h2>FTA/FTI Confirmation</h2>
       <pre>
 0050CNT, ………………………………………………………………….…………………VALID
@@ -215,18 +208,6 @@
 0180 FTX, ………………………………………………………………………………INR
       </pre>
     </section>
-
-    
-
-    
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
