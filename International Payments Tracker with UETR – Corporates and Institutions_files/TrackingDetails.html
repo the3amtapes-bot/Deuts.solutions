@@ -1,1 +1,216 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DB Payment Tracker - Transaction Summary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 1100px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 24px;
+      color: #003366;
+      margin: 0;
+    }
+    h2 {
+      font-size: 18px;
+      color: #003366;
+      border-left: 4px solid #003366;
+      padding-left: 8px;
+      margin-top: 25px;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    th {
+      background-color: #f0f4f8;
+      color: #003366;
+      width: 35%;
+    }
+    td {
+      color: #333;
+    }
+    .amount {
+      color: #007b5e;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    pre {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      padding: 12px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 14px;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 15px;
+      }
+      header h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      h2 {
+        font-size: 15px;
+      }
+      .amount {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Transaction Summary</h1>
+    </header>
+
+    <section>
+      <h2>Transaction Details</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Message Type</th><td>MT103 — FIN 103 AUTO FIN INST TRANSFER</td></tr>
+          <tr><th>Sender's Reference</th><td>ST39610094709</td></tr>
+          <tr><th>Transaction Code</th><td>247107959105379061256780</td></tr>
+          <tr><th>Transfer Number</th><td>32 — FINANCIAL COOPERATION - PRIVATE INVESTMENT</td></tr>
+          <tr><th>Value Date / Currency</th><td>DATE: SAMEDAY — CURRENCY: EURO</td></tr>
+          <tr><th>Amount</th><td class="amount">€ 2,000,000</td></tr>
+          <tr><th>Created</th><td>11/10/2025 — MESSAGE STATE: MT103</td></tr>
+          <tr><th>Priority</th><td>5TH BUSINESS DAY</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sender (Bank)</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>BIC</th><td>DEUTDEHHXXX</td></tr>
+          <tr><th>Bank name</th><td>DEUTSCHE BANK</td></tr>
+          <tr><th>Bank address</th><td>UNTER DEN LINDEN 13/15, 10117, BERLIN, GERMANY</td></tr>
+          <tr><th>Account name</th><td>INTERNATIONAL FINANCE CORPS. INC</td></tr>
+          <tr><th>Account number</th><td>2294671095699178002489</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Receiver (Beneficiary)</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+          <tr><th>Bank name</th><td>AXIS BANK</td></tr>
+          <tr><th>Bank address</th><td>SP ROAD SECUND HYD TG, HYDRABAD 500003</td></tr>
+          <tr><th>Account name</th><td>MD IMRAN ALAM ANSARI</td></tr>
+          <tr><th>Account number</th><td>5688241556</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Message & Validation</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>TRACK CODE</th><td>02021-39159-3</td></tr>
+          <tr><th>PKT SIGNATURE</th><td>HENRY BENSON</td></tr>
+          <tr><th>Confirmed & Received</th><td>RECEIVED: AXIS BANK</td></tr>
+          <tr><th>MIR</th><td>CH20857174908800321478</td></tr>
+          <tr><th>MOR</th><td>CH3784319085586127829</td></tr>
+          <tr><th>Release Code</th><td>SSD5160932136452597</td></tr>
+          <tr><th>Key</th><td>250143648</td></tr>
+          <tr><th>Download Code</th><td>MIL14632245013698</td></tr>
+          <tr><th>Approval Code</th><td>197453780014287913</td></tr>
+          <tr><th>Time</th><td>12:32:25 — Date: 11/10/2025</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Payment Status</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr><th>Current Status</th><td>Processed EUROPEAN CENTRAL BANK | EUROSYSTEM</td></tr>
+          <tr><th>Forex</th><td>Conversion Completed</td></tr>
+          <tr><th>Expected Amount</th><td>205,206,000.00 INR</td></tr>
+          <tr><th>Expected Date</th><td>15 Oct 2025</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>FTA/FTI Confirmation</h2>
+      <pre>
+0050CNT, ………………………………………………………………….…………………VALID
+0060 RFF-DTM, ………………………………………….………………………VALID
+0070 RFF, ……………………………………………………………….……………VALID
+0080 DTM, ……………………………………………………………….……………VALID
+0090 NAD-CTA-COM …………………………………….……………………VALID
+0100 NAD, …………………………………………………………….……………VALID
+0110 CTA, ………………………………….……………………………………….VALID
+0120 COM, …………………………………………………………………………VALID
+0130 ECR-FTX-5G4, …………………………………………………………VALID
+0140, ………………………………………………………………………………………………TAX
+0150, …………………………………………………………………………………………PENDING
+0160, …………………………………………………………………………………………SERVER
+0170 REF, ………………………………………………………………………………TARMINAL 4 MS
+0180 FTX, ………………………………………………………………………………INR
+      </pre>
+    </section>
+  </div>
+</body>
+</html>
+
